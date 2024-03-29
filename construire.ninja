@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/ssor/cdev/listechainee/
+cmake_ninja_workdir = /home/baptisteguellier/ProjectC
 # =============================================================================
 # Object build statements for EXECUTABLE target exec
 
@@ -44,13 +44,13 @@ cmake_ninja_workdir = /home/ssor/cdev/listechainee/
 
 build cmake_object_order_depends_target_exec: phony || CMakeFiles/exec.dir
 
-build CMakeFiles/exec.dir/src/list.c.o: C_COMPILER__exec_ /home/ssor/cdev/listechainee/src/list.c || cmake_object_order_depends_target_exec
+build CMakeFiles/exec.dir/src/list.c.o: C_COMPILER__exec_ /home/baptisteguellier/ProjectCsrc/list.c || cmake_object_order_depends_target_exec
   DEP_FILE = CMakeFiles/exec.dir/src/list.c.o.d
   INCLUDES = -I/home/ssor/cdev/listechainee
   OBJECT_DIR = CMakeFiles/exec.dir
   OBJECT_FILE_DIR = CMakeFiles/exec.dir/src
 
-build CMakeFiles/exec.dir/test/test.c.o: C_COMPILER__exec_ /home/ssor/cdev/listechainee/test/test.c || cmake_object_order_depends_target_exec
+build CMakeFiles/exec.dir/test/test.c.o: C_COMPILER__exec_ /home/baptisteguellier/ProjectC/test/test.c || cmake_object_order_depends_target_exec
   DEP_FILE = CMakeFiles/exec.dir/test/test.c.o.d
   INCLUDES = -I/home/ssor/cdev/listechainee
   OBJECT_DIR = CMakeFiles/exec.dir
@@ -87,7 +87,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/ssor/cdev/listechainee && /usr/bin/cmake --regenerate-during-build -S/home/ssor/cdev/listechainee -B/home/ssor/cdev/listechainee
+  COMMAND = cd /home/baptisteguellier/ProjectC && /usr/bin/cmake --regenerate-during-build -S/home/ssor/cdev/listechainee -B/home/ssor/cdev/listechainee
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
