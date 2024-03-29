@@ -14,7 +14,7 @@ rule CUSTOM_COMMAND
   description = $DESC
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/Asthral/cdev/listechainee -B/home/Asthral/cdev/listechainee
+  command = /usr/bin/cmake --regenerate-during-build -S/home/baptisteguellier/ProjectC -B/home/baptisteguellier/ProjectC
   description = Re-running CMake...
   generator = 1
 
