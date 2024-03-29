@@ -1,0 +1,27 @@
+rule C_COMPILER__exec_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/cc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+rule C_EXECUTABLE_LINKER__exec_
+  command = $PRE_LINK && /usr/bin/cc $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking C executable $TARGET_FILE
+  restat = $RESTAT
+
+rule CUSTOM_COMMAND
+  command = $COMMAND
+  description = $DESC
+
+rule RERUN_CMAKE
+  command = /usr/bin/cmake --regenerate-during-build -S/home/Asthral/cdev/listechainee -B/home/Asthral/cdev/listechainee
+  description = Re-running CMake...
+  generator = 1
+
+rule CLEAN
+  command = /usr/bin/ninja $FILE_ARG -t clean $TARGETS
+  description = Cleaning all built files...
+
+rule HELP
+  command = /usr/bin/ninja -t targets
+  description = All primary targets available:
